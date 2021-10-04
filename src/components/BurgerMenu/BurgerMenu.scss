@@ -2,8 +2,23 @@
   &_inner {
     &_img {
       cursor: pointer;
+      animation: burgerAnimation 1s;
+
+      &_imgOpen {
+        animation: burgerBackAnimation 1s;
+      }
     }
-    
+
+    @keyframes burgerAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+
     &_content {
       position: absolute;
       width: 100%;

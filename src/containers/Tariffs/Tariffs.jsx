@@ -16,7 +16,11 @@ export const Tariffs = () => {
                         <p className='tariffs_inner_list_el_suggestion'>{tariff.suggest_one}</p>
                         <p className='tariffs_inner_list_el_suggestion-two'>{tariff.suggest_two}</p>
                         <p className='tariffs_inner_list_el_text'>{tariff.description}</p>
-                        <Button name={'Попробовать'} isBlue={true}/>
+                        <Button
+                            name={'Попробовать'}
+                            isBlue={true}
+                            onClick={() => window.location.href = "https://wildbest.group/tariffs"}
+                        />
                     </li>)
                 }
             </ul>

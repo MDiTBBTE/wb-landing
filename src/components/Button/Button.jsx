@@ -9,6 +9,7 @@ export const Button = ({
   isDisable,
   styles,
   innerStyles,
+                           link
 }) => {
   return (
     <div className="btn">

@@ -4,17 +4,22 @@ import {BurgerMenu} from "../BurgerMenu/BurgerMenu";
 // STYLES
 import './Header.scss';
 
-export const Header = ({window}) => {
+export const Header = ({window: {width}}) => {
     return <header className='header_inner'>
-        <img className="header_inner_logo" src="/images/logo.svg" alt="logo"/>
-        {window.width <= 425 ? <BurgerMenu/> : <>
+        <img
+            className="header_inner_logo"
+            src="/images/logo.svg"
+            alt="logo"
+            onClick={() => window.location.href = "https://wildbest.group/login"}
+        />
+        {width <= 425 ? <BurgerMenu/> : <>
             <div className="header_inner_links">
                 <p className="header_inner_links_link">Telegram канал</p>
                 <p className="header_inner_links_link">Поддержка</p>
             </div>
             <div className="header_inner_btns">
-                <Button name={'Вход'}/>
-                <Button name={'Регистрация'} isBlue={true} styles={{width: '100%'}}/>
+                <Button name={'Вход'} onClick={() => window.location.href = "https://wildbest.group/login"}/>
+                <Button name={'Регистрация'} isBlue={true} onClick={() => window.location.href = "https://wildbest.group/signup"} styles={{width: '100%'}}/>
             </div>
         </>}
     </header>

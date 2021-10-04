@@ -21,7 +21,12 @@ export const Features = ({window}) => {
                         Продаешь крутые товары, но покупатели их не видят потому что они на последних страницах в выдаче? С помощью WILD BEST ты продвинешься
                         <span>в ТОП-20 всего за 14 дней!</span>
                     </p>
-                    <Button name={'Попробовать бесплатно'} isBlue={true} styles={{padding: '11px 48px'}}/>
+                    <Button
+                        name={'Попробовать бесплатно'}
+                        isBlue={true}
+                        styles={{padding: '11px 48px'}}
+                        onClick={() => window.location.href = "https://wildbest.group/login"}
+                    />
                 </div>
                 <img className="features_inner_feature_img" src="/images/features/Frame 1.svg" alt="chart"/>
             </div>

@@ -16,7 +16,7 @@ export const Carousel = ({reviews}) => {
         <div className='carousel_inner'>
             <div className='carousel_inner_reviews'>
                 <img className="carousel_inner_reviews_img-l" src="/images/carousel_arrow.svg" alt="arrow" onClick={handlePrevReview}/>
-                {reviews.map((review, idx) => <div className={idx !== selected ? 'carousel_inner_reviews_review' : 'carousel_inner_reviews_review-active'} style={{display: idx !== selected ? 'none' : 'block'}}>
+                {reviews.map((review, idx) => <div key={idx} className={idx !== selected ? 'carousel_inner_reviews_review' : 'carousel_inner_reviews_review-active'} style={{display: idx !== selected ? 'none' : 'block'}}>
                     <img className="carousel_inner_reviews_review_quotes" src="/images/quotes.svg" alt="quotes"/>
                     <div className='carousel_inner_reviews_review_info'>
                         <h3 className={'carousel_inner_reviews_review_info_title'}>{review.name}</h3>

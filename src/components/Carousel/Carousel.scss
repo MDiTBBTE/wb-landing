@@ -87,7 +87,11 @@
             line-height: 28px;
             text-align: center;
             color: #0A0D27;
-            //padding: 0 80px;
+
+            @media screen and (max-width: 425px) {
+              font-size: 14px;
+              line-height: 21px;
+            }
           }
         }
       }

@@ -20,7 +20,7 @@ export const Process = ({width}) => {
                     </div>
                 </div>)}
             </div>
-            <div className='process_inner_tree' style={{left: width <= 425 ? '20px' : '50%'}}>
+            <div className='process_inner_tree' style={{left: width <= 425 ? '25px' : '50%'}}>
                 {Array.from(Array(5).keys()).map( (el, idx) => <div key={idx} className='process_inner_tree_section'>
                     <p className='process_inner_tree_section_num'>{el + 1}</p>
                     {idx === 4 ? '' : <img className='process_inner_tree_section_img' src="/images/section.png" alt=""/>}

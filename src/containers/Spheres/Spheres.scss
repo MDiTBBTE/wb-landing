@@ -6,6 +6,10 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 425px) {
+      padding: 48px 0;
+    }
+
     &_title {
       font-family: OpenSans, sans-serif;
       font-style: normal;

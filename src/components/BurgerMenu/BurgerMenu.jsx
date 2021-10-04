@@ -20,8 +20,14 @@ export const BurgerMenu = () => {
             />
             {isOpenBM && <div className="burgerMenu_inner_content">
                 <div className="burgerMenu_inner_links">
-                    <p className="burgerMenu_inner_links_link">Telegram канал</p>
-                    <p className="burgerMenu_inner_links_link">Поддержка</p>
+                    <p
+                        className="burgerMenu_inner_links_link"
+                        onClick={() => window.location.href = "https://t.me/wildbest1"}
+                    >Telegram канал</p>
+                    <p
+                        className="burgerMenu_inner_links_link"
+                        onClick={() => window.location.href = "https://t.me/wildbest1"}
+                    >Поддержка</p>
                 </div>
                 <div className="burgerMenu_inner_btns">
                     <Button name={'Вход'} onClick={() => window.location.href = "https://wildbest.group/login"}/>

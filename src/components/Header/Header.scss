@@ -7,6 +7,10 @@
     box-shadow: 0 20px 40px rgba(10, 13, 39, 0.05);
     position: relative;
 
+    &_logo {
+      cursor: pointer;
+    }
+
     &_links {
       display: flex;
 

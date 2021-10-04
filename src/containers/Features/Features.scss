@@ -40,6 +40,8 @@
 
           @media screen and (max-width: 425px) {
             margin-top: 32px;
+            font-size: 20px;
+            line-height: 30px;
           }
 
           &_bl {
@@ -49,6 +51,11 @@
             font-size: 28px;
             line-height: 42px;
             color: rgb(20, 67, 234);
+
+            @media screen and (max-width: 425px) {
+              font-size: 20px;
+              line-height: 30px;
+            }
           }
         }
 

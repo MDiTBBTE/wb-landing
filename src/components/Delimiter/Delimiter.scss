@@ -1,0 +1,41 @@
+@import "/src/App.scss";
+
+.delimiter {
+  &_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 63px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 425px) {
+      padding: 38px 0;
+    }
+
+    &_text {
+      font-family: OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 54px;
+      color: rgba(255, 255, 255, 1);
+      margin-right: 32px;
+      cursor: pointer;
+
+      @media screen and (max-width: $mobile) {
+        font-size: 18px;
+        line-height: 28px;
+        margin-right: 20px;
+      }
+    }
+
+    &_img {
+      cursor: pointer;
+
+      @media screen and (max-width: 425px) {
+        width: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.header {
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+    box-shadow: 0 20px 40px rgba(10, 13, 39, 0.05);
+    position: relative;
+
+    &_links {
+      display: flex;
+
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
+
+      &_link {
+        font-family: OpenSans, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        cursor: pointer;
+
+        &:first-child {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &_btns {
+      display: flex;
+
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
+
+      .btn {
+
+        &:first-child {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

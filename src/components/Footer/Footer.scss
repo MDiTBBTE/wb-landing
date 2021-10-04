@@ -1,0 +1,35 @@
+.footer {
+  &_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0A0D27;
+    padding: 45px 0;
+
+    font-family: OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 38px;
+    color: #FFFFFF;
+
+    &_links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &_link {
+        margin-right: 16px;
+
+        &_delimiter {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    &_text {
+      font-weight: 500;
+    }
+  }
+}

@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// COMPONENTS
+import {Header} from "./components/Header/Header";
+import {Features} from "./containers/Features/Features";
+import {Delimiter} from "./components/Delimiter/Delimiter";
+import {Footer} from "./components/Footer/Footer";
+import {KeyMoments} from "./containers/KeyMoments/KeyMoments";
+import {Spheres} from "./containers/Spheres/Spheres";
+import {Tariffs} from "./containers/Tariffs/Tariffs";
+import {Reviews} from "./containers/Reviews/Reviews";
+import {Process} from "./containers/Process/Process";
+// INSTRUMENTS
+import {useWindowSize} from "./utils/utils";
+// STYLES
+import './App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let window = useWindowSize();
+
+    return (
+    <div>
+        <Header window={window}/>
+        <Features window={window}/>
+        <Delimiter/>
+        <Process window={window}/>
+        <Delimiter/>
+        <KeyMoments/>
+        <Delimiter/>
+        <Spheres/>
+        <Delimiter/>
+        <Reviews/>
+        <Tariffs/>
+        <Footer/>
+    </div >
+  )
 }
 
 export default App;

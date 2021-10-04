@@ -1,0 +1,116 @@
+.keyMoments {
+  &_inner {
+    padding: 88px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_title {
+      font-family: OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 54px;
+      text-align: center;
+      color: #0A0D27;
+    }
+
+    &_text {
+      margin-top: 24px;
+      font-family: OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      color: #0A0D27;
+    }
+
+    &_list {
+      margin-top: 80px;
+
+      @media screen and (max-width: 425px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &_el {
+        display: flex;
+        align-items: center;
+        margin-top: 48px;
+
+        @media screen and (max-width: 425px) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &_info {
+          margin-left: 40px;
+
+          @media screen and (max-width: 425px) {
+            margin-left: 0;
+            margin-top: 24px;
+          }
+
+          &_title {
+            font-family: OpenSans, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 28px;
+            color: #0A0D27;
+          }
+
+          &_text {
+            margin-top: 8px;
+            font-family: OpenSans, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            color: #0A0D27;
+          }
+
+          &_list {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: 425px) {
+              margin-top: 8px;
+            }
+
+            &_el {
+              position: relative;
+              margin-top: 4px;
+              padding-left: 15px;
+              text-align: left;
+              font-family: OpenSans, sans-serif;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 21px;
+
+              &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                width: 4px;
+                height: 4px;
+                background-color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

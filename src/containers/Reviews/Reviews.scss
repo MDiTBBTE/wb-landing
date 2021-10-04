@@ -1,0 +1,25 @@
+.reviews {
+  &_inner {
+    padding-top: 88px;
+
+    @media screen and (max-width: 425px) {
+      padding-top: 48px;
+    }
+
+    &_title {
+      margin-bottom: 78px;
+      font-family: OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 54px;
+      text-align: center;
+      color: #0A0D27;
+
+      @media screen and (max-width: 425px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}

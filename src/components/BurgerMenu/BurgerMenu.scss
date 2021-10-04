@@ -1,0 +1,49 @@
+.burgerMenu {
+  &_inner {
+    &_img {
+      cursor: pointer;
+    }
+    
+    &_content {
+      position: absolute;
+      width: 100%;
+      background-color: #FFFFFF;
+      left: 0;
+      top: 50px;
+      padding-bottom: 240px;
+    }
+
+    &_links {
+      font-family: OpenSans, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #0A0D27;
+
+      &_link {
+        margin-top: 34px;
+        cursor: pointer;
+
+        &:first-child {
+          margin-top: 158px;
+        }
+      }
+    }
+
+    &_btns {
+      display: flex;
+      flex-direction: column;
+
+      &>.btn {
+        margin-top: 24px;
+
+        .btn_inner_main {
+          margin: 0 auto;
+          width: 240px;
+        }
+      }
+    }
+  }
+}

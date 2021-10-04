@@ -1,24 +1,17 @@
-$mobile: '425px';
-
 .container {
-    //padding: 0 120px;
     max-width: 1200px;
     width: 82%;
     margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
-
     .container {
-        //padding: 0 20px;
         width: 94%;
     }
 }
 
 @media screen and (max-width: 380px) {
-
     .container {
-        //padding: 0 20px;
         width: 94%;
     }
 }

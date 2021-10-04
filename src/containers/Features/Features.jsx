@@ -25,8 +25,7 @@ export const Features = ({width}) => {
                         name={'Попробовать бесплатно'}
                         isBlue={true}
                         styles={{padding: '11px 48px'}}
-                        onClick={() => window.location.href = "https://wildbest.group/login"}
-                    />
+                        onClick={() => window.location.href = "https://t.me/wildbest1"}                    />
                 </div>
                 <img className="features_inner_feature_img" src="/images/features/Frame 1.svg" alt="chart"/>
             </div>

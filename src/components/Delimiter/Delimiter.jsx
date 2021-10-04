@@ -9,12 +9,10 @@ export const Delimiter = () => {
         >
             <p
                 className="delimiter_inner_text"
-                onClick={() => window.location.href = "https://wildbest.group/login"}
-            >Попробовать бесплатно</p>
+                onClick={() => window.location.href = "https://t.me/wildbest1"}            >Попробовать бесплатно</p>
             <img
                 className="delimiter_inner_img"
-                onClick={() => window.location.href = "https://wildbest.group/login"}
-                src="/images/arrow_r.svg" alt="arrow"
+                onClick={() => window.location.href = "https://t.me/wildbest1"}                src="/images/arrow_r.svg" alt="arrow"
             />
         </div>
     </div>

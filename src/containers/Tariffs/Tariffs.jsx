@@ -19,8 +19,7 @@ export const Tariffs = () => {
                         <Button
                             name={'Попробовать'}
                             isBlue={true}
-                            onClick={() => window.location.href = "https://wildbest.group/tariffs"}
-                        />
+                            onClick={() => window.location.href = "https://t.me/wildbest1"}                        />
                     </li>)
                 }
             </ul>

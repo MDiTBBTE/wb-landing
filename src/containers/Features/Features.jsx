@@ -5,18 +5,18 @@ import {FEATURES} from "../../constants/constants";
 // STYLES
 import './Features.scss';
 
-export const Features = ({window}) => {
+export const Features = ({width}) => {
     return <div className='container features'>
         <div className='features_inner'>
             <div className="features_inner_feature" style={{
-                flexDirection: window.width <= 425 ? 'column-reverse' : 'row'
+                flexDirection: width <= 425 ? 'column-reverse' : 'row'
             }}>
                 <div className="features_inner_feature_info">
                     <p className="features_inner_feature_info_text">
                         Продвигайте свои товары в ТОП
-                        {window.width <= 425 && <span style={{marginLeft: '6px'}} className="features_inner_feature_info_text_bl">за пару кликов мыши</span>}
+                        {width <= 425 && <span style={{marginLeft: '6px'}} className="features_inner_feature_info_text_bl">за пару кликов мыши</span>}
                     </p>
-                    {window.width > 425 && <p className="features_inner_feature_info_text_bl">за пару кликов мыши</p>}
+                    {width > 425 && <p className="features_inner_feature_info_text_bl">за пару кликов мыши</p>}
                     <p className="features_inner_feature_info_desc">
                         Продаешь крутые товары, но покупатели их не видят потому что они на последних страницах в выдаче? С помощью WILD BEST ты продвинешься
                         <span>в ТОП-20 всего за 14 дней!</span>
@@ -34,7 +34,7 @@ export const Features = ({window}) => {
                 key={`${idx.toString()}_${feature.title}`}
                 className="features_inner_feature"
                 style={{
-                flexDirection: window.width <= 425 ? 'column-reverse' : [0, 2].includes(idx) ? 'row-reverse' : 'row'
+                flexDirection: width <= 425 ? 'column-reverse' : [0, 2].includes(idx) ? 'row-reverse' : 'row'
             }}>
                 <div className="features_inner_feature_info">
                     <p className="features_inner_feature_info_text">{feature.title}</p>

@@ -14,15 +14,13 @@ import {useWindowSize} from "./utils/utils";
 import './App.scss';
 
 function App() {
+    let {width} = useWindowSize();
 
-    let window = useWindowSize();
-
-    return (
-    <div>
-        <Header window={window}/>
-        <Features window={window}/>
+    return <div>
+        <Header width={width}/>
+        <Features width={width}/>
         <Delimiter/>
-        <Process window={window}/>
+        <Process width={width}/>
         <Delimiter/>
         <KeyMoments/>
         <Delimiter/>
@@ -32,7 +30,6 @@ function App() {
         <Tariffs/>
         <Footer/>
     </div >
-  )
 }
 
 export default App;

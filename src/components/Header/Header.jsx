@@ -4,7 +4,7 @@ import {BurgerMenu} from "../BurgerMenu/BurgerMenu";
 // STYLES
 import './Header.scss';
 
-export const Header = ({window: {width}}) => {
+export const Header = ({width}) => {
     return <header className='header_inner'>
         <img
             className="header_inner_logo"

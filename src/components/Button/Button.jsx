@@ -9,14 +9,16 @@ export const Button = ({
   isDisable,
   styles,
   innerStyles,
-                           link
+  id,
+  className
 }) => {
   return (
     <div className="btn">
       <div className="btn_inner" style={innerStyles}>
         <button
           type={type || "button"}
-          className="btn_inner_main"
+          className={ className || "btn_inner_main"}
+          id={id}
           style={{
             backgroundColor: isDisable ? "#ccc" : isBlue ? "#1343EA" : "#fff",
             borderColor: isBlue ? '#1343EA' : '#D6DADE',

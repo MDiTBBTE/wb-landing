@@ -37,9 +37,14 @@
         margin-top: 32px;
         margin-left: 0;
 
+        &:nth-child(even) {
+          justify-content: flex-end;
+        }
+
         @media screen and (max-width: 425px) {
           margin-left: 40px;
           margin-top: 56px;
+          justify-content: center;
 
           &:first-child {
             margin-top: 40px;
@@ -99,12 +104,12 @@
       transform: translateX(-50%);
 
       @media screen and (max-width: 425px) {
-        top: 232px
+        top: 232px;
+        left: 25px;
       }
 
       @media screen and (max-width: 375px) {
-        top: 222px
-
+        top: 222px;
       }
 
       &_section {

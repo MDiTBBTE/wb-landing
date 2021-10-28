@@ -23,8 +23,8 @@ export const Header = ({width}) => {
                 >Поддержка</p>
             </div>
             <div className="header_inner_btns">
-                <Button name={'Вход'} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
-                <Button name={'Регистрация'} isBlue={true} onClick={() => window.location.href = "https://t.me/wildbest1"} styles={{width: '100%'}}/>
+                <Button id={'ym(85982521,\'reachGoal\',\'vhod\')'} name={'Вход'} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
+                <Button id={'ym(85982521,\'reachGoal\',\'reg\')'} name={'Регистрация'} isBlue={true} onClick={() => window.location.href = "https://t.me/wildbest1"} styles={{width: '100%'}}/>
             </div>
         </>}
     </header>

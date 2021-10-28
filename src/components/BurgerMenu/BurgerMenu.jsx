@@ -15,7 +15,7 @@ export const BurgerMenu = () => {
             <img
                 className={!isOpenBM ? 'burgerMenu_inner_imgOpen' : "burgerMenu_inner_img"}
                 src={`/images/${!isOpenBM ? 'burger.svg' : 'cross.svg'}`}
-                alt={!isOpenBM ? 'burger.svg' : 'cross'}
+                alt={!isOpenBM ? 'burger' : 'cross'}
                 onClick={handleToggleBM}
             />
             {isOpenBM && <div className="burgerMenu_inner_content">
@@ -30,8 +30,8 @@ export const BurgerMenu = () => {
                     >Поддержка</p>
                 </div>
                 <div className="burgerMenu_inner_btns">
-                    <Button name={'Вход'} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
-                    <Button name={'Регистрация'} isBlue={true} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
+                    <Button id={'ym(85982521,\'reachGoal\',\'vhod\')'} name={'Вход'} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
+                    <Button id={'ym(85982521,\'reachGoal\',\'reg\')'} name={'Регистрация'} isBlue={true} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
                 </div>
             </div>}
         </div>

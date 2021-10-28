@@ -15,3 +15,34 @@
         width: 94%;
     }
 }
+
+// styles for 404 page
+.notFoundWrapper {
+    font-size: 24px;
+    text-align: center;
+    font-family: OpenSans, sans-serif;
+    font-weight: 600;
+
+    &_error {
+        font-size: 10em;
+        color: rgb(244, 84, 84);
+    }
+
+    &_msg {
+        font-size: 1.5em;
+    }
+
+    &_link {
+        font-size: 1em;
+        line-height: 2.2em;
+        color: rgb(19, 67, 234);
+        text-decoration: none;
+    }
+}
+
+.notFoundPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}

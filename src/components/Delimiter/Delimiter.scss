@@ -20,6 +20,8 @@
       color: rgba(255, 255, 255, 1);
       margin-right: 32px;
       cursor: pointer;
+      background-color: transparent;
+      border: none;
 
       @media screen and (max-width: 425px) {
         font-size: 18px;

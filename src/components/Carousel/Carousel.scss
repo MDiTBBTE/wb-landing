@@ -20,6 +20,7 @@
           display: block;
           cursor: pointer;
           margin-left: 68px;
+          transform: rotate(180deg);
 
           @media screen and (max-width: 768px) {
             display: none;
@@ -37,12 +38,14 @@
         min-height: 202px;
         height: auto;
         position: relative;
+        display: none;
 
         @media screen and (max-width: 768px) {
           padding: 20px;
         }
 
         &-active {
+          display: block;
           padding: 40px 80px;
           background: #F4F7FB;
           border-radius: 8px;
@@ -118,6 +121,7 @@
           cursor: pointer;
           margin-left: 66px;
           display: none;
+          transform: rotate(180deg);
 
           @media screen and (max-width: 768px) {
             display: block;

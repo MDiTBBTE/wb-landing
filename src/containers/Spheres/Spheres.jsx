@@ -14,7 +14,7 @@ export const Spheres = () => {
                         <img
                             className='spheres_inner_list_el_img'
                             src={`/images/spheres/${sphere.image}`}
-                            alt=""
+                            alt={sphere.image.slice(0, -4)}
                         />
                         <p className='spheres_inner_list_el_title'>{sphere.title}</p>
                         <p className='spheres_inner_list_el_text'>{sphere.description}</p>

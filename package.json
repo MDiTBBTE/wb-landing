@@ -21,8 +21,8 @@
     "postbuild": "react-snap"
   },
   "reactSnap": {
-    "source": "dist",
-    "destination": "dist",
+    "source": "build",
+    "destination": "build",
     "include": [
       "/",
       "/404"

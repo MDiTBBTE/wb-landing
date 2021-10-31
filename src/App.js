@@ -10,7 +10,7 @@ import {Reviews} from "./containers/Reviews/Reviews";
 import {Process} from "./containers/Process/Process";
 // INSTRUMENTS
 import {useWindowSize} from "./utils/utils";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 // STYLES
 import './App.scss';
 import {Button} from "./components/Button/Button";

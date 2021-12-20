@@ -21,7 +21,7 @@ export const Process = () => {
             <div className='process_inner_tree'>
                 {Array.from(Array(5).keys()).map( (el, idx) => <div key={idx} className='process_inner_tree_section'>
                     <p className='process_inner_tree_section_num'>{el + 1}</p>
-                    {idx === 4 ? '' : <img className='process_inner_tree_section_img' src="/images/section.png" alt="section"/>}
+                    {idx === 4 ? '' : <img className='process_inner_tree_section_img' src="/images/section1.png" alt="section"/>}
             </div>
             )}</div>
         </div>

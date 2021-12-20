@@ -1,0 +1,168 @@
+.form {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    padding: 0 34px;
+    max-width: 1020px;
+    
+    &_inner {
+        padding: 64px;
+        border-radius: 20px;
+        background-color: #3a3eff;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #fff;
+
+        @media screen and (max-width: 767px) {
+            padding: 34px 26px;
+        }
+
+        &_titleWrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_title {
+            font-family: OpenSans, sans-serif;
+            font-size: 41px;
+            font-weight: 700;
+
+            @media screen and (max-width: 767px) {
+                font-size: 22px;
+            }
+        }
+
+        &_cancelWrapper {
+            background: none;
+            border: none;
+
+            @media screen and (max-width: 767px) {
+                &>img {
+                    height: 32px;
+                }
+            }
+        }
+
+        &_row {
+            display: flex;
+            margin-top: 104px;
+            margin-bottom: 64px;
+            justify-content: space-between;
+
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                margin-top: 54px;
+                margin-bottom: 54px;
+            }
+
+            &_fields,
+            &_textarea {
+                width: 46%;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+            }
+
+            &_fields {
+                display: flex;
+                flex-direction: column;
+
+                &_input {
+                    border: none;
+                    border-bottom: 1px solid #fff;
+                    margin-top: 40px;
+                    background: transparent;
+                    font-family: OpenSans, sans-serif;
+                    font-size: 22px;
+                    line-height: 32px;
+                    color: #fff;
+
+                    &:focus {
+                        border-color: rgba($color: #ccc, $alpha: 0.9);
+
+                        &::placeholder {
+                            color: rgba($color: #ccc, $alpha: 0.8)
+                        }
+                    }
+
+                    &::placeholder {
+                        color: #fff;
+                        font-size: 22px;
+
+                        @media screen and (max-width: 767px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &_textarea {
+                display: block;
+                padding: 8px;
+                border: 1px solid #fff;
+                border-radius: 20px;
+                background-color: transparent;
+                color: #fff;
+                font-family: OpenSans, sans-serif;
+                font-size: 22px;
+                resize: none;
+
+                &:focus {
+                    border-color: rgba($color: #ccc, $alpha: 0.9);
+
+                    &::placeholder {
+                        color: rgba($color: #ccc, $alpha: 0.8)
+                    }
+                }
+
+                &::placeholder {
+                    color: #fff;
+                    font-size: 22px;
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 16px;
+                    }
+                }
+
+                @media screen and (max-width: 767px) {
+                    margin-top: 40px;
+                    font-size: 16px;
+                    min-height: 100px;
+                    padding: 12px 0 0 4px;
+                }
+            }
+        }
+
+        &_btn {
+            display: inline-block;
+            min-width: 264px;
+            padding: 24px 40px 26px;
+            border: none;
+            border-radius: 48px;
+            background-color: #fff;
+            color: #000;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            font-family: OpenSans, sans-serif;
+            font-size: 22px;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                padding: 16px;
+            }
+        }
+    }
+}

@@ -42,28 +42,28 @@ const MainPage = ({width}) => {
         })
     }
 
-    const getNotify = (action, content) => action === 'success' ? 
+    const getNotify = (action, content) => action === 'success' ?
         toast.success(content, {
             icon: "🚀",
             autoClose: 3000
-        }) : 
+        }) :
         toast.warning(content, {
             autoClose: 3000
         });
 
     const handleSubmit = async (event, form) => {
         event.preventDefault();
-        
+
         try {
-            const res = await emailjs.send('service_kv5m3il', 'template_5npxecr', form, 'user_GiycM0usOOUnNMneKYkrq');
+            const res = await emailjs.send('service_ovuck8f', 'template_ra32qkl', form, 'user_HM441UeQFjzEQ8cGBwXa9');
             if(res.status === 200) {
                 getNotify('success', 'Спасибо за заказ! Ваши данные были успешно отправлены.');
                 setOpenFormModal({isOpen: false, title: ''});
             } else {
-                getNotify('warning', 'Извените, что-то пошло не так!')
+                getNotify('warning', 'Извините, что-то пошло не так!')
             }
         } catch(error) {
-            getNotify('warning', 'Извените, что-то пошло не так!')
+            getNotify('warning', 'Извините, что-то пошло не так!')
         }
     }
 
@@ -79,10 +79,10 @@ const MainPage = ({width}) => {
         <Reviews/>
         <Tariffs handleOpenModalTarrifs={handleOpenModal}/>
         {
-            formModal.isOpen && 
+            formModal.isOpen &&
                 <div className='formWrapper'>
-                    <Form 
-                        formTitle={formModal.title} 
+                    <Form
+                        formTitle={formModal.title}
                         handleCloseForm={() => setOpenFormModal({isOpen: false, title: ''})}
                         handleSubmit={handleSubmit}
                     />

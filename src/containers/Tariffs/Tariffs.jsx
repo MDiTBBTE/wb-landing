@@ -18,12 +18,17 @@ export const Tariffs = ({handleOpenModalTarrifs}) => {
                         <p className='tariffs_inner_list_el_text'>{tariff.description}</p>
                         <Button
                             name={idx === 0 ? 'Заказать выкупы' : 'Заказать отзывы'}
-                            id={'ym(85982521,\'reachGoal\',\'tarif\')'}
                             isBlue={true}
-                            onClick={handleOpenModalTarrifs ? 
-                                () => handleOpenModalTarrifs(idx === 0 ? 'Заказать выкупы' : 'Заказать отзывы') : 
-                                () =>  window.location.href = "https://t.me/wildbest1"
-                            }                        
+                            onClick={handleOpenModalTarrifs ?
+                                () => {
+                                    handleOpenModalTarrifs(idx === 0 ? 'Заказать выкупы' : 'Заказать отзывы');
+                                    (() => `ym(85982521,'reachGoal','tarif')`)();
+                                } :
+                                () => {
+                                    (() => `ym(85982521,'reachGoal','tarif')`)();
+                                    window.location.href = "https://t.me/wildbest1";
+                                }
+                            }
                         />
                     </li>)
                 }

@@ -20,11 +20,14 @@ export const Features = ({width}) => {
                         <span>в ТОП-20 всего за 14 дней!</span>
                     </p>
                     <Button
-                        id={'ym(85982521,\'reachGoal\',\'free\')'}
                         name={'Попробовать бесплатно'}
                         isBlue={true}
                         styles={{padding: '11px 48px'}}
-                        onClick={() => window.location.href = "https://t.me/wildbest1"}                    />
+                        onClick={() => {
+                            (() => `ym(85982521,'reachGoal','free')`)();
+                            window.location.href = "https://t.me/wildbest1"
+                        }}
+                    />
                 </div>
                 <img className="features_inner_feature_img" src="/images/features/chart.svg" alt="chart"/>
             </div>

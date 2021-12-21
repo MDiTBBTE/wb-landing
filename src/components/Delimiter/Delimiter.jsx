@@ -10,11 +10,16 @@ export const Delimiter = ({btnText = 'Попробовать бесплатно'
             style={{backgroundImage: `url(/images/bg.svg)`}}
         >
             <Button
-                id={'ym(85982521,\'reachGoal\',\'tryfree\')'}
                 name={btnText}
                 styles={{backgroundColor: 'transparent'}}
                 className="delimiter_inner_text"
-                onClick={handleOpenModalDelimetr ? () => handleOpenModalDelimetr('Заказать продвижение') : () =>  window.location.href = "https://t.me/wildbest1"}
+                onClick={handleOpenModalDelimetr ? () => {
+                    (() => `ym(85982521,'reachGoal','tryfree')`)();
+                    handleOpenModalDelimetr('Заказать продвижение');
+                } : () => {
+                    (() => `ym(85982521,'reachGoal','tryfree')`)();
+                    window.location.href = "https://t.me/wildbest1";
+                }}
                 isBlue={true}
             />
             <img

@@ -30,8 +30,14 @@ export const BurgerMenu = () => {
                     >Поддержка</p>
                 </div>
                 <div className="burgerMenu_inner_btns">
-                    <Button id={'ym(85982521,\'reachGoal\',\'vhod\')'} name={'Вход'} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
-                    <Button id={'ym(85982521,\'reachGoal\',\'reg\')'} name={'Регистрация'} isBlue={true} onClick={() => window.location.href = "https://t.me/wildbest1"}/>
+                    <Button name={'Вход'} onClick={() => {
+                        window.location.href = "https://t.me/wildbest1";
+                        (() => `ym(85982521,'reachGoal','vhod')`)()
+                    }}/>
+                    <Button name={'Регистрация'} isBlue={true} onClick={() => {
+                        (() => `ym(85982521,'reachGoal','reg')`)()
+                        window.location.href = "https://t.me/wildbest1";
+                    }}/>
                 </div>
             </div>}
         </div>

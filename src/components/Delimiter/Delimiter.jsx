@@ -18,13 +18,13 @@ export const Delimiter = ({btnText = 'Попробовать бесплатно'
                     handleOpenModalDelimetr('Заказать продвижение');
                 } : () => {
                     (() => `ym(85982521,'reachGoal','tryfree')`)();
-                    window.location.href = "https://t.me/wildbest1";
+                    window.location.href = "https://wildbest.group/";
                 }}
                 isBlue={true}
             />
             <img
                 className="delimiter_inner_img"
-                onClick={handleOpenModalDelimetr ? () => handleOpenModalDelimetr('Заказать продвижение') : () =>  window.location.href = "https://t.me/wildbest1"} src="/images/arrow_r.svg" alt="arrow"
+                onClick={handleOpenModalDelimetr ? () => handleOpenModalDelimetr('Заказать продвижение') : () =>  window.location.href = "https://wildbest.group/"} src="/images/arrow_r.svg" alt="arrow"
             />
         </div>
     </div>

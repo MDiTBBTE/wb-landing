@@ -9,7 +9,7 @@ export const Footer = () => {
                     <p
                         key={idx}
                         className="footer_inner_links_link"
-                        onClick={() => window.location.href = "https://t.me/wildbest1"}
+                        onClick={() => window.location.href = "https://wildbest.group/"}
                     >
                         {link} {idx !== 2 && <span className="footer_inner_links_link_delimiter">|</span>}
                     </p>

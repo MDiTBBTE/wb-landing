@@ -3,10 +3,13 @@
     &_img {
       cursor: pointer;
       animation: burgerAnimation 1s;
+      width: 24px;
+    }
 
-      &_imgOpen {
-        animation: burgerBackAnimation 1s;
-      }
+    &_imgOpen {
+      animation: burgerBackAnimation 1s;
+      cursor: pointer;
+      width: 24px;
     }
 
     @keyframes burgerAnimation {

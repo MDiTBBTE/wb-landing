@@ -26,7 +26,7 @@ export const Tariffs = ({handleOpenModalTarrifs}) => {
                                 } :
                                 () => {
                                     (() => `ym(85982521,'reachGoal','tarif')`)();
-                                    window.location.href = "https://t.me/wildbest1";
+                                    window.location.href = "https://wildbest.group/";
                                 }
                             }
                         />

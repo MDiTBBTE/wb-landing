@@ -25,7 +25,7 @@ export const Features = ({width}) => {
                         styles={{padding: '11px 48px'}}
                         onClick={() => {
                             (() => `ym(85982521,'reachGoal','free')`)();
-                            window.location.href = "https://t.me/wildbest1"
+                            window.location.href = "https://wildbest.group/"
                         }}
                     />
                 </div>

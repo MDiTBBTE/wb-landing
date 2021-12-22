@@ -37,7 +37,17 @@ export const Form = ({formTitle, handleCloseForm, handleSubmit}) => {
                     </div>
                     <textarea name='comment' placeholder="Комментарии" value={form.comment} onChange={({target}) => handleChange('comment', target.value)} maxLength="5000" required className="form_inner_row_textarea"/>
                 </div>
-                <input type="submit" value="Отправить" data-wait="Работаем..." className="form_inner_btn"/>
+                <input
+                    id={(() => {
+                        if (formTitle === 'Заказать продвижение') {
+                            return `ym(85982521,'reachGoal','free')`;
+                        } else {
+                            return formTitle === 'Заказать выкупы' ?
+                                `ym(85982521,'reachGoal','vykup')` :
+                                `ym(85982521,'reachGoal','otzyv')`;
+                        }
+                    })()}
+                    type="submit" value="Отправить" data-wait="Работаем..." className="form_inner_btn"/>
         </form>
     </div>
 }

@@ -11,10 +11,10 @@ export const Delimiter = ({btnText = 'Попробовать бесплатно'
         >
             <Button
                 name={btnText}
+                id={handleOpenModalDelimetr ? `ym(85982521,'reachGoal','free')` : `ym(85982521,'reachGoal','tryfree')`}
                 styles={{backgroundColor: 'transparent'}}
                 className="delimiter_inner_text"
                 onClick={handleOpenModalDelimetr ? () => {
-                    (() => `ym(85982521,'reachGoal','tryfree')`)();
                     handleOpenModalDelimetr('Заказать продвижение');
                 } : () => {
                     (() => `ym(85982521,'reachGoal','tryfree')`)();

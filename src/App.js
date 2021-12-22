@@ -57,6 +57,14 @@ const MainPage = ({width}) => {
         try {
             const res = await emailjs.send('service_ovuck8f', 'template_ra32qkl', form, 'user_HM441UeQFjzEQ8cGBwXa9');
             if(res.status === 200) {
+                if(formModal.title === 'Заказать продвижение') {
+                    (() =>`ym(85982521,'reachGoal','free')`)()
+                } else {
+                    formModal.title === 'Заказать выкупы' ?
+                        (() => `ym(85982521,'reachGoal','vykup')`)() :
+                        (() => `ym(85982521,'reachGoal','otzyv')`)();
+                }
+
                 getNotify('success', 'Спасибо за заказ! Ваши данные были успешно отправлены.');
                 setOpenFormModal({isOpen: false, title: ''});
             } else {

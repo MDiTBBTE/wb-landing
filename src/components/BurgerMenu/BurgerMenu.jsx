@@ -27,7 +27,7 @@ export const BurgerMenu = () => {
                     <p
                         className="burgerMenu_inner_links_link"
                         onClick={() => window.location.href = "https://t.me/wildbest1"}
-                    >Поддержка</p>
+                    >Продвижение на Ozon</p>
                 </div>
                 <div className="burgerMenu_inner_btns">
                     <Button name={'Вход'} onClick={() => {
@@ -35,7 +35,7 @@ export const BurgerMenu = () => {
                         (() => `ym(85982521,'reachGoal','vhod')`)()
                     }}/>
                     <Button name={'Регистрация'} isBlue={true} onClick={() => {
-                        (() => `ym(85982521,'reachGoal','reg')`)()
+                        (() => `ym(87122683,'reachGoal','reg')`)()
                         window.location.href = "https://wildbest.group/";
                     }}/>
                 </div>

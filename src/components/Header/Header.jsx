@@ -21,7 +21,7 @@ export const Header = ({width}) => {
                 <p
                     className="header_inner_links_link"
                     onClick={() => window.location.href = "https://t.me/wildbest1"}
-                >Поддержка</p>
+                >Продвижение на Ozon</p>
             </div>
             <div className="header_inner_btns">
                 <Button name={'Вход'} onClick={() => {
@@ -29,7 +29,7 @@ export const Header = ({width}) => {
                     window.location.href = "https://wildbest.group/";
                 }}/>
                 <Button name={'Регистрация'} isBlue={true} onClick={() => {
-                    (() => `ym(85982521,'reachGoal','reg')`)()
+                    (() => `ym(87122683,'reachGoal','reg')`)()
                     window.location.href = "https://wildbest.group/";
                 }} styles={{width: '100%'}}/>
             </div>

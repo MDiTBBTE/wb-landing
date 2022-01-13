@@ -11,10 +11,15 @@ export const Process = () => {
                 {PROCESS.map((process, idx) => <div key={idx} className='process_inner_list_elWrapper'>
                     <div className='process_inner_list_el'>
                         <img className='process_inner_list_el_img' src={`/images/process/${process.image}`} alt={process.image.slice(0, -4)}/>
-                        <p className='process_inner_list_el_text'>
-                            {process.description}
-                            <span className='process_inner_list_el_text_sub'>{process.sub}</span>
-                        </p>
+                        {process.middle ?
+                            <p className='process_inner_list_el_text'>
+                                {process.description}  <span className='process_inner_list_el_text_sub'>{process.middle}</span> {process.end}
+                            </p> :
+                            <p className='process_inner_list_el_text'>
+                                {process.description}
+                                <span className='process_inner_list_el_text_sub'>{process.sub}</span>
+                            </p>
+                        }
                     </div>
                 </div>)}
             </div>

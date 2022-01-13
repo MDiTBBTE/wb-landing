@@ -1,5 +1,5 @@
 // CORE
-import { useState } from "react";
+import {useEffect, useState} from "react";
 // COMPONENTS
 import {Header} from "./components/Header/Header";
 import {Features} from "./containers/Features/Features";
@@ -74,6 +74,28 @@ const MainPage = ({width}) => {
             getNotify('warning', 'Извините, что-то пошло не так!')
         }
     }
+
+    useEffect(() => {
+        (function(w, d, s, o){
+            var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+                if (document.readyState !== 'loading') window.Marquiz.init(o);
+                else document.addEventListener("DOMContentLoaded", function() {
+                    window.Marquiz.init(o);
+                });
+            };
+            d.head.insertBefore(j, d.head.firstElementChild);
+        })(window, document, 'script', {
+                host: '//quiz.marquiz.ru',
+                region: 'eu',
+                id: '61dee335b1dc20003f69054e',
+                autoOpen: 12,
+                autoOpenFreq: 'always',
+                openOnExit: true,
+                disableOnMobile: false
+            }
+        );
+    }, []);
+
 
     return <Layout width={width}>
         <Features width={width}/>

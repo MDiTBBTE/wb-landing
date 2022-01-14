@@ -76,28 +76,12 @@ const MainPage = ({width}) => {
     }
 
     useEffect(() => {
-        (function(w, d, s, o){
-            var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
-                if (document.readyState !== 'loading') window.Marquiz.init(o);
-                else document.addEventListener("DOMContentLoaded", function() {
-                    window.Marquiz.init(o);
-                });
-            };
-            d.head.insertBefore(j, d.head.firstElementChild);
-        })(window, document, 'script', {
-                host: '//quiz.marquiz.ru',
-                region: 'eu',
-                id: '61dee335b1dc20003f69054e',
-                autoOpen: 12,
-                autoOpenFreq: 'always',
-                openOnExit: true,
-                disableOnMobile: false
-            }
-        );
+        (function(t, p) {window.Marquiz ? window.Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {window.Marquiz.add([t, p])})})('Button', {id: '61dee335b1dc20003f69054e', buttonText: 'Пройти тест', bgColor: '#0054dd', textColor: '#ffffff', rounded: true, shadow: 'rgba(0, 84, 221, 0.5)', blicked: true, fixed: 'right'})
     }, []);
 
 
     return <Layout width={width}>
+        <div data-marquiz-id="61dee335b1dc20003f69054e"/>
         <Features width={width}/>
         <Delimiter btnText='Заказать продвижение' handleOpenModalDelimetr={handleOpenModal}/>
         <Process width={width}/>

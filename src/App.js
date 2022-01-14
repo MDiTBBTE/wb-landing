@@ -81,7 +81,6 @@ const MainPage = ({width}) => {
 
 
     return <Layout width={width}>
-        <div data-marquiz-id="61dee335b1dc20003f69054e"/>
         <Features width={width}/>
         <Delimiter btnText='Заказать продвижение' handleOpenModalDelimetr={handleOpenModal}/>
         <Process width={width}/>
@@ -103,11 +102,13 @@ const MainPage = ({width}) => {
                 </div>
         }
         <ToastContainer />
+        <div data-marquiz-id="61dee335b1dc20003f69054e"/>
     </Layout>
 }
 
 const getNotFoundPage = (width) => {
-    return <Layout width={width} className='notFoundPage'>
+    return<div className='notFoundPage'>
+        <Header width={width}/>
         <div className='notFoundWrapper'>
             <p className='notFoundWrapper_error'>404</p>
             <p className='notFoundWrapper_msg'>Извините, страница не была найдена</p>
@@ -117,9 +118,9 @@ const getNotFoundPage = (width) => {
                 styles={{margin: '0 auto', marginTop: '15px'}}
                 onClick={() => window.location.href = "/"}
             />
-            {/*<Link to="/" className='notFoundWrapper_link'>Перейти на главную</Link>*/}
         </div>
-    </Layout>
+        <Footer/>
+    </div>
 }
 
 function App() {

@@ -107,7 +107,7 @@ const MainPage = ({width}) => {
 }
 
 const getNotFoundPage = (width) => {
-    return<div className='notFoundPage'>
+    return <div className='notFoundPage'>
         <Header width={width}/>
         <div className='notFoundWrapper'>
             <p className='notFoundWrapper_error'>404</p>

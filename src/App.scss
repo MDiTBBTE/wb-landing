@@ -17,7 +17,7 @@
 }
 
 // styles for 404 page
-.notFoundWrapper {
+#notFoundWrapper {
     font-size: 24px;
     text-align: center;
     font-family: OpenSans, sans-serif;
@@ -40,7 +40,7 @@
     }
 }
 
-.notFoundPage {
+#notFoundPage {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

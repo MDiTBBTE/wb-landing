@@ -16,7 +16,6 @@ export const Footer = () => {
                 )}
             </div>
             <p className="footer_inner_text">© 2021 WildBest</p>
-
         </div>
     </div>
 }

@@ -1,5 +1,5 @@
 // CORE
-import {useEffect, useState} from "react";
+import {useState} from "react";
 // COMPONENTS
 import {Header} from "./components/Header/Header";
 import {Features} from "./containers/Features/Features";
@@ -75,11 +75,6 @@ const MainPage = ({width}) => {
         }
     }
 
-    useEffect(() => {
-        (function(t, p) {window.Marquiz ? window.Marquiz.add([t, p]) : document.addEventListener('marquizLoaded', function() {window.Marquiz.add([t, p])})})('Button', {id: '61dee335b1dc20003f69054e', buttonText: 'Пройти тест', bgColor: '#0054dd', textColor: '#ffffff', rounded: true, shadow: 'rgba(0, 84, 221, 0.5)', blicked: true, fixed: 'right'})
-    }, []);
-
-
     return <Layout width={width}>
         <Features width={width}/>
         <Delimiter btnText='Заказать продвижение' handleOpenModalDelimetr={handleOpenModal}/>
@@ -102,16 +97,15 @@ const MainPage = ({width}) => {
                 </div>
         }
         <ToastContainer />
-        <div data-marquiz-id="61dee335b1dc20003f69054e"></div>
     </Layout>
 }
 
 const NotFoundPage = ({width}) => {
-    return <div className='notFoundPage'>
+    return <div id='notFoundPage'>
         <Header width={width}/>
-        <div className='notFoundWrapper'>
-            <p className='notFoundWrapper_error'>404</p>
-            <p className='notFoundWrapper_msg'>Извините, страница не была найдена</p>
+        <div id='notFoundWrapper'>
+            <p id='notFoundWrapper_error'>404</p>
+            <p id='notFoundWrapper_msg'>Извините, страница не была найдена</p>
             <Button
                 name={'Перейти на главную'}
                 isBlue={true}

@@ -21,8 +21,8 @@ import emailjs from 'emailjs-com';
 import './App.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Layout = ({width, children, className}) => {
-    return <div className={className}>
+const Layout = ({width, children}) => {
+    return <div className='notFoundPage'>
         <Header width={width}/>
         {children}
         <Footer/>
@@ -101,11 +101,10 @@ const MainPage = ({width}) => {
 }
 
 const NotFoundPage = ({width}) => {
-    return <div id='notFoundPage'>
-        <Header width={width}/>
-        <div id='notFoundWrapper'>
-            <p id='notFoundWrapper_error'>404</p>
-            <p id='notFoundWrapper_msg'>Извините, страница не была найдена</p>
+    return <Layout width={width}>
+        <div className='notFoundWrapper'>
+            <p className='notFoundWrapper_error'>404</p>
+            <p className='notFoundWrapper_msg'>Извините, страница не была найдена</p>
             <Button
                 name={'Перейти на главную'}
                 isBlue={true}
@@ -113,8 +112,7 @@ const NotFoundPage = ({width}) => {
                 onClick={() => window.location.href = "/"}
             />
         </div>
-        <Footer/>
-    </div>
+    </Layout>
 }
 
 function App() {

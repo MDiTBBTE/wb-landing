@@ -102,11 +102,11 @@ const MainPage = ({width}) => {
                 </div>
         }
         <ToastContainer />
-        <div data-marquiz-id="61dee335b1dc20003f69054e"/>
+        <div data-marquiz-id="61dee335b1dc20003f69054e"></div>
     </Layout>
 }
 
-const getNotFoundPage = (width) => {
+const NotFoundPage = ({width}) => {
     return <div className='notFoundPage'>
         <Header width={width}/>
         <div className='notFoundWrapper'>
@@ -129,7 +129,7 @@ function App() {
     return <BrowserRouter>
         <Switch>
             <Route exact path="/" render={() => <MainPage width={width} />} />
-            <Route path="*" render={() => getNotFoundPage(width)} />
+            <Route path="*" render={() => <NotFoundPage width={width}/>} />
         </Switch>
     </BrowserRouter>
 }

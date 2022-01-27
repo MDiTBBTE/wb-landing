@@ -40,11 +40,11 @@ export const Form = ({formTitle, handleCloseForm, handleSubmit}) => {
                 <input
                     id={(() => {
                         if (formTitle === 'Заказать продвижение') {
-                            return `ym(85982521,'reachGoal','free')`;
+                            return `ym(87122683,'reachGoal','free1')`;
                         } else {
                             return formTitle === 'Заказать выкупы' ?
-                                `ym(85982521,'reachGoal','vykup')` :
-                                `ym(85982521,'reachGoal','otzyv')`;
+                                `ym(87122683,'reachGoal','vykup')` :
+                                `ym(87122683,'reachGoal','otzyv')`;
                         }
                     })()}
                     type="submit" value="Отправить" data-wait="Работаем..." className="form_inner_btn"/>

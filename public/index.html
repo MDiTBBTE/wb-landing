@@ -26,24 +26,24 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script async type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-      ym(85982521, "init", {defer: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true});
-      ym(87122683, "init", {defer: true, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true});
+        ym(87122683, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
     </script>
-    <noscript>
-      <div>
-        <img src="https://mc.yandex.ru/watch/85982521" style="position:absolute; left:-9999px;" alt="" />
-        <img src="https://mc.yandex.ru/watch/87122683" style="position:absolute; left:-9999px;" alt="" />
-      </div>
-    </noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/87122683" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="//www.googletagmanager.com/gtag/js?id=G-10B112GKZ2"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10B112GKZ2"></script>
+    <script async>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -52,7 +52,7 @@
     </script>
 
     <!-- Marquiz script start -->
-    <script>
+    <script async>
       (function(w, d, s, o){
         var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
           if (document.readyState !== 'loading') Marquiz.init(o);
@@ -75,7 +75,7 @@
     <!-- Marquiz script end -->
 
     <!-- Facebook Pixel Code -->
-    <script>
+    <script async>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};

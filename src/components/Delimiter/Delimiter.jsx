@@ -11,13 +11,14 @@ export const Delimiter = ({btnText = 'Попробовать бесплатно'
         >
             <Button
                 name={btnText}
-                id={handleOpenModalDelimetr ? `ym(85982521,'reachGoal','free')` : `ym(85982521,'reachGoal','tryfree')`}
+                id={handleOpenModalDelimetr ? `ym(87122683,'reachGoal','free')` : `ym(87122683,'reachGoal','tryfree')`}
                 styles={{backgroundColor: 'transparent'}}
                 className="delimiter_inner_text"
                 onClick={handleOpenModalDelimetr ? () => {
+                    (() => `ym(87122683,'reachGoal','free')`)();
                     handleOpenModalDelimetr('Заказать продвижение');
                 } : () => {
-                    (() => `ym(85982521,'reachGoal','tryfree')`)();
+                    (() => `ym(87122683,'reachGoal','tryfree')`)();
                     window.location.href = "https://wildbest.group/";
                 }}
                 isBlue={true}

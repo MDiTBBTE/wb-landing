@@ -24,7 +24,7 @@ export const Features = ({width}) => {
                         isBlue={true}
                         styles={{padding: '11px 48px'}}
                         onClick={() => {
-                            (() => `ym(85982521,'reachGoal','free')`)();
+                            (() => `ym(87122683,'reachGoal','tryfree')`)();
                             window.location.href = "https://wildbest.group/"
                         }}
                     />

@@ -38,8 +38,8 @@ const MainPage = ({width}) => {
     const handleOpenModal = (formName) => {
         if(formName !== 'Заказать продвижение') {
             formName === 'Заказать выкупы' ?
-                (() => `ym(87122683,'reachGoal','vykupy')`)() :
-                (() => `ym(87122683,'reachGoal','otzyvy')`)();
+                window.ym(87122683,'reachGoal','vykupy') :
+                window.ym(87122683,'reachGoal','otzyvy');
         }
 
         setOpenFormModal({
@@ -64,11 +64,10 @@ const MainPage = ({width}) => {
             const res = await emailjs.send('service_ovuck8f', 'template_ra32qkl', form, 'user_HM441UeQFjzEQ8cGBwXa9');
             if(res.status === 200) {
                 if(formModal.title === 'Заказать продвижение') {
-                    (() =>`ym(87122683,'reachGoal','free1')`)()
+                    window.ym(87122683,'reachGoal','free1');
                 } else {
                     formModal.title === 'Заказать выкупы' ?
-                        (() => `ym(87122683,'reachGoal','vykup')`)() :
-                        (() => `ym(87122683,'reachGoal','otzyv')`)();
+                        window.ym(87122683,'reachGoal','vykup') : window.ym(87122683,'reachGoal','otzyv');
                 }
 
                 getNotify('success', 'Спасибо за заказ! Ваши данные были успешно отправлены.');

@@ -25,11 +25,11 @@ export const Header = ({width}) => {
             </div>
             <div className="header_inner_btns">
                 <Button name={'Вход'} onClick={() => {
-                    (() => `ym(87122683,'reachGoal','vhod')`)()
+                    window.ym(87122683,'reachGoal','vhod');
                     window.location.href = "https://wildbest.group/";
                 }}/>
                 <Button name={'Регистрация'} isBlue={true} onClick={() => {
-                    (() => `ym(87122683,'reachGoal','reg')`)()
+                    window.ym(87122683,'reachGoal','reg');
                     window.location.href = "https://wildbest.group/";
                 }} styles={{width: '100%'}}/>
             </div>

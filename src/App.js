@@ -32,6 +32,7 @@ const Layout = ({width, children}) => {
 const MainPage = ({width}) => {
     const [formModal, setOpenFormModal] = useState({
         isOpen: false,
+        isFormSent: false,
         title: ''
     });
 
@@ -70,8 +71,7 @@ const MainPage = ({width}) => {
                         window.ym(87122683,'reachGoal','vykup') : window.ym(87122683,'reachGoal','otzyv');
                 }
 
-                getNotify('success', 'Спасибо за заказ! Ваши данные были успешно отправлены.');
-                setOpenFormModal({isOpen: false, title: ''});
+                setOpenFormModal({isOpen: false, isFormSent: true, title: ''});
             } else {
                 getNotify('warning', 'Извините, что-то пошло не так!')
             }
@@ -79,6 +79,14 @@ const MainPage = ({width}) => {
             getNotify('warning', 'Извините, что-то пошло не так!')
         }
     }
+
+    const handleCloseModalForm = () => setOpenFormModal({isOpen: false, isFormSent: false, title: ''});
+
+    const handleClickOutSide = (e, cb) => {
+        if (e.target.className === 'formWrapper') {
+            cb();
+        }
+    };
 
     return <Layout width={width}>
         <Features width={width}/>
@@ -92,12 +100,16 @@ const MainPage = ({width}) => {
         <Reviews/>
         <Tariffs handleOpenModalTarrifs={handleOpenModal}/>
         {
-            formModal.isOpen &&
-                <div className='formWrapper'>
+            (formModal.isOpen || formModal.isFormSent) &&
+                <div
+                    className='formWrapper'
+                    onClick={(e) => handleClickOutSide(e, handleCloseModalForm)}
+                >
                     <Form
                         formTitle={formModal.title}
-                        handleCloseForm={() => setOpenFormModal({isOpen: false, title: ''})}
+                        handleCloseForm={handleCloseModalForm}
                         handleSubmit={handleSubmit}
+                        isFormSent={formModal.isFormSent}
                     />
                 </div>
         }

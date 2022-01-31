@@ -12,9 +12,9 @@ export const Features = ({width}) => {
                 <div className="features_inner_feature_info">
                     <h1 className="features_inner_feature_info_text">
                         Продвигайте товары на Wildberries в ТОП
-                        {width <= 425 && <span className="features_inner_feature_info_text_bl">за пару кликов мыши</span>}
+                        {width <= 428 && <span className="features_inner_feature_info_text_bl">за пару кликов мыши</span>}
                     </h1>
-                    {width > 425 && <span className="features_inner_feature_info_text_bl">за пару кликов мыши</span>}
+                    {width > 428 && <span className="features_inner_feature_info_text_bl">за пару кликов мыши</span>}
                     <p className="features_inner_feature_info_desc">
                         Продаете крутые товары, но покупатели их не видят, потому что они на последних страницах в выдаче? С помощью сервиса WILDBEST Вы продвинетесь
                         <span> в ТОП-20 всего за 14 дней!</span>

@@ -13,7 +13,7 @@
         flex-direction: row-reverse;
       }
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 428px) {
         flex-direction: column-reverse;
 
         &:nth-child(even) {
@@ -29,7 +29,7 @@
       &_img {
         width: 48%;
 
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 428px) {
           width: 100%;
           text-align: center;
         }
@@ -47,7 +47,7 @@
           line-height: 42px;
           color: #0A0D27;
 
-          @media screen and (max-width: 425px) {
+          @media screen and (max-width: 428px) {
             margin-top: 32px;
             font-size: 20px;
             line-height: 30px;
@@ -61,7 +61,7 @@
             line-height: 42px;
             color: rgb(20, 67, 234);
 
-            @media screen and (max-width: 425px) {
+            @media screen and (max-width: 428px) {
               font-size: 20px;
               line-height: 30px;
               margin-left: 6px;
@@ -87,7 +87,7 @@
           margin-top: 48px;
 
           .btn_inner_main {
-            @media screen and (max-width: 425px) {
+            @media screen and (max-width: 428px) {
               width: 100%;
             }
           }

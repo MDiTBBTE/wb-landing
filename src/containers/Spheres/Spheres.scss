@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 428px) {
       padding: 48px 0;
     }
 
@@ -19,7 +19,7 @@
       text-align: center;
       color: #0A0D27;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 428px) {
         font-size: 20px;
         line-height: 30px;
       }
@@ -43,7 +43,7 @@
       justify-content: space-between;
       flex-direction: row;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: 428px) {
         flex-direction: column;
         align-items: center;
         margin-top: 40px;
@@ -54,7 +54,7 @@
         flex-direction: column;
         width: 30%;
 
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: 428px) {
           width: 85%;
           margin-top: 40px;
 
@@ -67,7 +67,7 @@
           width: 120px;
           margin: 0 auto;
 
-          @media screen and (max-width: 425px) {
+          @media screen and (max-width: 428px) {
             width: 80px;
           }
         }
@@ -82,7 +82,7 @@
           color: #0A0D27;
           text-align: center;
 
-          @media screen and (max-width: 425px) {
+          @media screen and (max-width: 428px) {
             margin-top: 24px;
           }
         }

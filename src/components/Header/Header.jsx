@@ -12,7 +12,7 @@ export const Header = ({width}) => {
             alt="logo"
             onClick={() => window.location.href = "https://wildbest.group/"}
         />
-        {width <= 425 ? <BurgerMenu/> : <>
+        {width <= 428 ? <BurgerMenu/> : <>
             <div className="header_inner_links">
                 <p
                     className="header_inner_links_link"

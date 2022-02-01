@@ -1,146 +1,38 @@
-// CORE
-import {useState} from "react";
+import React, {useEffect} from "react";
 // COMPONENTS
-import {Header} from "./components/Header/Header";
-import {Features} from "./containers/Features/Features";
-import {Delimiter} from "./components/Delimiter/Delimiter";
-import {Footer} from "./components/Footer/Footer";
-import {KeyMoments} from "./containers/KeyMoments/KeyMoments";
-import {Spheres} from "./containers/Spheres/Spheres";
-import {Tariffs} from "./containers/Tariffs/Tariffs";
-import {Reviews} from "./containers/Reviews/Reviews";
-import {Process} from "./containers/Process/Process";
-import {Button} from "./components/Button/Button";
-import { Form } from "./components/Form/Form";
-import { ToastContainer, toast } from 'react-toastify';
+import {ThanksPage} from "./pages/ThanksPage/ThanksPage";
+import {NotFoundPage} from "./pages/NotFoundPage/NotFoundPage";
+import {MainPage} from "./pages/MainPage/MainPage";
 // INSTRUMENTS
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {useWindowSize} from "./utils/utils";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import emailjs from 'emailjs-com';
+import {Layout} from "./layouts/Layout";
 // STYLES
-import './App.scss';
 import 'react-toastify/dist/ReactToastify.css';
+import './App.scss';
 
-const Layout = ({width, children}) => {
-    return <div className='notFoundPage'>
-        <Header width={width}/>
-        {children}
-        <Footer/>
-    </div>
-}
-
-const MainPage = ({width}) => {
-    const [formModal, setOpenFormModal] = useState({
-        isOpen: false,
-        isFormSent: false,
-        title: ''
-    });
-
-    const handleOpenModal = (formName) => {
-        if(formName !== 'Заказать продвижение') {
-            formName === 'Заказать выкупы' ?
-                window.ym(87122683,'reachGoal','vykupy') :
-                window.ym(87122683,'reachGoal','otzyvy');
-        }
-
-        setOpenFormModal({
-            isOpen: true,
-            title: formName
-        })
-    }
-
-    const getNotify = (action, content) => action === 'success' ?
-        toast.success(content, {
-            icon: "🚀",
-            autoClose: 3000
-        }) :
-        toast.warning(content, {
-            autoClose: 3000
-        });
-
-    const handleSubmit = async (event, form) => {
-        event.preventDefault();
-
-        try {
-            const res = await emailjs.send('service_ovuck8f', 'template_ra32qkl', form, 'user_HM441UeQFjzEQ8cGBwXa9');
-            if(res.status === 200) {
-                if(formModal.title === 'Заказать продвижение') {
-                    window.ym(87122683,'reachGoal','free1');
-                } else {
-                    formModal.title === 'Заказать выкупы' ?
-                        window.ym(87122683,'reachGoal','vykup') : window.ym(87122683,'reachGoal','otzyv');
-                }
-
-                setOpenFormModal({isOpen: false, isFormSent: true, title: ''});
-            } else {
-                getNotify('warning', 'Извините, что-то пошло не так!')
-            }
-        } catch(error) {
-            getNotify('warning', 'Извините, что-то пошло не так!')
-        }
-    }
-
-    const handleCloseModalForm = () => setOpenFormModal({isOpen: false, isFormSent: false, title: ''});
-
-    const handleClickOutSide = (e, cb) => {
-        if (e.target.className === 'formWrapper') {
-            cb();
-        }
-    };
-
-    return <Layout width={width}>
-        <Features width={width}/>
-        <Delimiter btnText='Заказать продвижение' handleOpenModalDelimetr={handleOpenModal}/>
-        <Process width={width}/>
-        <Delimiter/>
-        <KeyMoments/>
-        <Delimiter/>
-        <Spheres/>
-        <Delimiter/>
-        <Reviews/>
-        <Tariffs handleOpenModalTarrifs={handleOpenModal}/>
-        {
-            (formModal.isOpen || formModal.isFormSent) &&
-                <div
-                    className='formWrapper'
-                    onClick={(e) => handleClickOutSide(e, handleCloseModalForm)}
-                >
-                    <Form
-                        formTitle={formModal.title}
-                        handleCloseForm={handleCloseModalForm}
-                        handleSubmit={handleSubmit}
-                        isFormSent={formModal.isFormSent}
-                    />
-                </div>
-        }
-        <ToastContainer />
-    </Layout>
-}
-
-const NotFoundPage = ({width}) => {
-    return <Layout width={width}>
-        <div className='notFoundWrapper'>
-            <p className='notFoundWrapper_error'>404</p>
-            <p className='notFoundWrapper_msg'>Извините, страница не была найдена</p>
-            <Button
-                name={'Перейти на главную'}
-                isBlue={true}
-                styles={{margin: '0 auto', marginTop: '15px'}}
-                onClick={() => window.location.href = "/"}
-            />
-        </div>
-    </Layout>
-}
-
-function App() {
+export const App = () => {
     let {width} = useWindowSize();
 
+    useEffect(() => {
+        const div = document.querySelector('#anchor');
+
+        if(window.location.pathname !== '/') {
+            div.classList.add("pageWrapper")
+        } else {
+            div.classList.remove("pageWrapper")
+        }
+    }, [window.location.pathname]);
+
     return <BrowserRouter>
-        <Switch>
-            <Route exact path="/" render={() => <MainPage width={width} />} />
-            <Route path="*" render={() => <NotFoundPage width={width}/>} />
-        </Switch>
+        <div id='anchor' >
+            <Layout width={width}>
+                <Switch>
+                    <Route exact path="/" render={() => <MainPage width={width} />} />
+                    <Route exact path="/thanks" render={() => <ThanksPage width={width} />} />
+                    <Route path="/*" render={() => <NotFoundPage width={width}/>} />
+                </Switch>
+            </Layout>
+        </div>
     </BrowserRouter>
 }
-
-export default App;

@@ -2,58 +2,19 @@
     max-width: 1200px;
     width: 82%;
     margin: 0 auto;
-}
 
-@media screen and (max-width: 768px) {
-    .container {
+    @media screen and (max-width: 768px) {
+        width: 94%;
+    }
+
+    @media screen and (max-width: 380px) {
         width: 94%;
     }
 }
 
-@media screen and (max-width: 380px) {
-    .container {
-        width: 94%;
-    }
-}
-
-// styles for 404 page
-.notFoundWrapper {
-    &_error {
-        font-family: OpenSans, sans-serif;
-        font-weight: 600;
-        text-align: center;
-        font-size: 14em;
-        color: rgb(244, 84, 84);
-    }
-
-    &_msg {
-        font-family: OpenSans,sans-serif;
-        font-weight: 600;
-        text-align: center;
-        font-size: 2.5em;
-    }
-
-    &_link {
-        font-size: 1em;
-        line-height: 2.2em;
-        color: rgb(19, 67, 234);
-        text-decoration: none;
-    }
-}
-
-.notFoundPage {
+.pageWrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-}
-
-.formWrapper {
-    position: fixed;
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    z-index: 1001;
-    background-color: rgba(0, 0, 0, 0.8);
 }

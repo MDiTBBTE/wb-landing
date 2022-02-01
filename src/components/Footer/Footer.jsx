@@ -2,7 +2,7 @@
 import './Footer.scss';
 
 export const Footer = () => {
-    return <div className='footer'>
+    return <footer className='footer'>
         <div className='footer_inner'>
             <div className="footer_inner_links">
                 {['Контакты', 'Политика конфиденциальности', 'Публичная оферта'].map((link, idx) =>
@@ -17,5 +17,5 @@ export const Footer = () => {
             </div>
             <p className="footer_inner_text">© 2021 WildBest</p>
         </div>
-    </div>
+    </footer>
 }

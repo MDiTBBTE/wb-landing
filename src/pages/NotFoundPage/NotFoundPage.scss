@@ -1,0 +1,23 @@
+.notFoundWrapper {
+  &_error {
+    font-family: OpenSans, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14em;
+    color: rgb(244, 84, 84);
+  }
+
+  &_msg {
+    font-family: OpenSans,sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  &_link {
+    font-size: 1em;
+    line-height: 2.2em;
+    color: rgb(19, 67, 234);
+    text-decoration: none;
+  }
+}

@@ -11,7 +11,7 @@ import {Layout} from "./layouts/Layout";
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 
-export const App = () => {
+function App() {
     let {width} = useWindowSize();
 
     useEffect(() => {
@@ -36,3 +36,5 @@ export const App = () => {
         </div>
     </BrowserRouter>
 }
+
+export default App;

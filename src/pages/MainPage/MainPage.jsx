@@ -11,6 +11,8 @@ import {Spheres} from "../../containers/Spheres/Spheres";
 import {Reviews} from "../../containers/Reviews/Reviews";
 import {Tariffs} from "../../containers/Tariffs/Tariffs";
 import {Form} from "../../components/Form/Form";
+// STYLES
+import './MainPage.scss';
 
 export const MainPage = ({width}) => {
     const [formModal, setOpenFormModal] = useState({

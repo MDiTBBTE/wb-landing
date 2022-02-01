@@ -2,7 +2,7 @@
 import React from 'react';
 import { hydrate, render } from "react-dom";
 // COMPONENTS
-import {App} from './App';
+import App from './App';
 // STYLES
 import './styles/reset.css';
 import './styles/index.css';

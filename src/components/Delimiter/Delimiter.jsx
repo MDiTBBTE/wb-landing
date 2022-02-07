@@ -15,6 +15,7 @@ export const Delimiter = ({btnText = 'Попробовать бесплатно'
                 className="delimiter_inner_text"
                 onClick={handleOpenModalDelimetr ? () => {
                     window.ym(87122683,'reachGoal','free');
+                    window.fbq('track', 'Lead');
                     handleOpenModalDelimetr('Заказать продвижение');
                 } : () => {
                     window.ym(87122683,'reachGoal','tryfree');

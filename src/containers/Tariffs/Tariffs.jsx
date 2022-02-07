@@ -22,10 +22,12 @@ export const Tariffs = ({handleOpenModalTarrifs}) => {
                             onClick={handleOpenModalTarrifs ?
                                 () => {
                                     window.ym(87122683,'reachGoal','tarif');
+                                    window.fbq('track', 'Lead');
                                     handleOpenModalTarrifs(idx === 0 ? 'Заказать выкупы' : 'Заказать отзывы');
                                 } :
                                 () => {
                                     window.ym(87122683,'reachGoal','tarif');
+                                    window.fbq('track', 'Lead');
                                     window.location.href = "https://wildbest.group/";
                                 }
                             }
